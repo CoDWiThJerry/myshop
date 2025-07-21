@@ -1,6 +1,7 @@
+// src/App.jsx
 import React from 'react';
 import './index.css';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Navbar from './Component/Navbar';
 import Slider from './Component/Slider';
@@ -27,23 +28,22 @@ const MainLayout = () => (
 );
 
 const App = () => {
+  console.log('✅ App rendered');
   return (
-    <Router>
-      <div id="app-wrapper" className="d-flex flex-column min-vh-100">
-        <Navbar />
-        <main className="flex-grow-1">
-          <Routes>
-            <Route path="/" element={<MainLayout />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/shop/:id" element={<ShopListing />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div id="app-wrapper" className="d-flex flex-column min-vh-100">
+      <Navbar />
+      <main className="flex-grow-1">
+        <Routes>
+          <Route path="/" element={<MainLayout />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:id" element={<ShopListing />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 };
 

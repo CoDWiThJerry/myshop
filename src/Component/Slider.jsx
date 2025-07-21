@@ -5,11 +5,16 @@ import img3 from './background1.jpg';
 
 const Slider = () => {
   return (
-    <div id="carouselExample" className="carousel slide position-relative" data-bs-ride="carousel">
+    <div
+      id="carouselExample"
+      className="carousel slide position-relative"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
       <div className="carousel-inner">
         <div className="carousel-item active position-relative">
           <img src={img1} className="d-block w-100 carousel-image" alt="Slide 1" />
-          <div className="carousel-caption text-start">
+          <div className="carousel-caption text-start d-none d-md-block">
             <h2 className="fw-bold">Discover New Styles</h2>
             <p className="lead">Upgrade your wardrobe with the latest fashion collections.</p>
             <button className="btn btn-light shadow fw-semibold">Shop Now</button>
@@ -18,7 +23,7 @@ const Slider = () => {
 
         <div className="carousel-item position-relative">
           <img src={img2} className="d-block w-100 carousel-image" alt="Slide 2" />
-          <div className="carousel-caption text-start">
+          <div className="carousel-caption text-start d-none d-md-block">
             <h2 className="fw-bold">Exclusive Offers</h2>
             <p className="lead">Don't miss out on trending fashion at unbeatable prices.</p>
             <button className="btn btn-light shadow fw-semibold">Explore</button>
@@ -27,7 +32,7 @@ const Slider = () => {
 
         <div className="carousel-item position-relative">
           <img src={img3} className="d-block w-100 carousel-image" alt="Slide 3" />
-          <div className="carousel-caption text-start">
+          <div className="carousel-caption text-start d-none d-md-block">
             <h2 className="fw-bold">Trendy Collections</h2>
             <p className="lead">Find clothes that match your vibe and personality.</p>
             <button className="btn btn-light shadow fw-semibold">See Now</button>
@@ -35,7 +40,7 @@ const Slider = () => {
         </div>
       </div>
 
-      {/* Bottom Center Arrows */}
+      {/* ✅ Bottom Center Arrows */}
       <div className="carousel-arrows d-flex justify-content-center gap-3 position-absolute bottom-0 start-50 translate-middle-x mb-4">
         <button
           className="btn btn-light rounded-circle shadow"
